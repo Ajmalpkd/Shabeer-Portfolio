@@ -1,0 +1,33 @@
+/* കസ്റ്റം നിറങ്ങൾ */
+.bg-custom-purple { background-color: #701c8b; }
+.text-custom-purple { color: #701c8b; }
+.bg-custom-yellow { background-color: #FFC000; }
+.bg-custom-dark-purple { background-color: #701c8b; }
+.border-custom-purple { border-color: #701c8b; }
+
+body {
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* മൊബൈൽ മെനുവിൽ ക്ലിക്ക് ചെയ്യുമ്പോൾ പുറത്ത് കാണിക്കേണ്ട ക്ലാസ് */
+.mobile-menu-hidden {
+    display: none;
+}
+
+
+/* ഹീറോ സെക്ഷനിലെ പ്രധാന കണ്ടന്റ്, ചിത്രവും ടെക്സ്റ്റും വരുന്ന ഭാഗം */
+.hero-content-wrapper {
+    display: flex;
+    flex-direction: column; /* മൊബൈലിൽ കോളമായി വരും */
+    align-items: center;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .hero-content-wrapper {
+        flex-direction: row; /* വലിയ സ്ക്രീനുകളിൽ വരിയായി വരും */
+    }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Shabeer - Portfolio (Updated Layout)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+
+<main class=" mx-auto px-4 sm:px-4 lg:px-16 flex flex-col flex-grow pt-8 pb-8">
+<header class="w-full sticky top-0 z-50">
+    <div class=" mx-auto px-1 sm:px-1 lg:px-1 py-1 flex justify-between items-center bg-custom-purple rounded-full shadow-md" 
+         data-aos="fade-down" data-aos-duration="1000">
+        
+        <div class="flex items-center space-x-2">
+            <span class="w-14 h-10 rounded-full bg-custom-yellow"></span>
+            <span class="text-xl font-bold text-white">Muhammad Shabeer</span>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-6">
+            <a href="#home" class="text-yellow-500 font-semibold hover:text-custom-dark-purple">Home</a>
+            <a href="#services" class="text-white hover:text-custom-purple">Services</a>
+            <a href="#about" class="text-white hover:text-custom-purple">About</a>
+            <a href="#projects" class="text-white hover:text-custom-purple">Projects</a>
+            <a href="#contact" class="px-5 py-2 bg-white text-custom-purple rounded-full font-semibold hover:bg-custom-dark-purple transition duration-300">
+                Contact Me
+            </a>
+        </nav>
+        
+        <button id="mobile-menu-button" class="md:hidden text-white p-2 focus:outline-none">
+             <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+             <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu-hidden md:hidden absolute w-[90%] left-1/2 -translate-x-1/2 mt-[-10px] shadow-2xl rounded-xl overflow-hidden">
+
+        <nav class="flex flex-col space-y-2 px-6 pt-8 pb-6 bg-white -mt-8 rounded-t-lg">
+            <a href="#home" class="block py-2 text-custom-purple font-semibold hover:bg-gray-100">Home</a>
+            <a href="#services" class="block py-2 text-gray-700 hover:bg-gray-100">Services</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:bg-gray-100">About</a>
+            <a href="#projects" class="block py-2 text-gray-700 hover:bg-gray-100">Projects</a>
+            
+            <a href="#contact" class="block mt-4 text-center px-5 py-3 bg-custom-purple text-white rounded-full font-semibold hover:bg-custom-dark-purple transition duration-300">
+                Contact Me
+            </a>
+        </nav>
+    </div>
+</header>
+
+    <div class="hero-content-wrapper flex-col md:flex-row items-center justify-between mt-16 mb-8 md:mb-16"> 
+        
+        <div class="content-area w-full md:w-3/5 pr-0 md:pr-12 text-center md:text-left">
+            
+            <p class="text-xl font-bold text-gray-700 mt-4 md:mt-0" 
+                data-aos="fade-right" data-aos-delay="300">Hello,</p>
+                
+            <h1 class="text-xl text-gray-700 mb-6" 
+                data-aos="fade-right" data-aos-delay="400">Welcome to My Creative World!</h1>
+                
+            <h2 class="text-5xl font-extrabold text-custom-purple mb-6" 
+                data-aos="fade-right" data-aos-delay="500"><span style="color: black;">I'm</span>  Muhammad Shabeer,</h2>
+                
+            <p class="text-sm text-gray-700 leading-relaxed mb-8" 
+                data-aos="fade-right" data-aos-delay="600">
+                A <span style="font-weight:bold; ">Graphic Designer</span> with two years of experience and a passion for visual storytelling. My expertise includes digital poster creation, typography, layout, composition, print design, and problem-solving. My diverse portfolio reflects my dedication to creativity, innovation, and excellence.
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed mb-8" 
+                data-aos="fade-right" data-aos-delay="700">
+                Explore my work and let's create something amazing together!
+            </p>
+
+            <hr class="border-gray-300 mb-8 w-1/2 mx-auto md:mx-0" data-aos="fade-up" data-aos-delay="800">
+        </div>
+
+        <div class="md:w-1/3 lg:w-1/4 flex justify-center md:justify-end relative mt-4 md:mt-0 mb-4 md:mb-0" 
+             data-aos="fade-left" data-aos-duration="1500">
+            <img src="./Images/DP.png" alt="Profile Picture of Muhammad Shabeer">
+        </div>
+    </div>
+    
+    
+<section class="w-full   mx-auto flex flex-col  md:flex-row items-center justify-between  py-2 "
+             data-aos="fade-up" data-aos-duration="1000">
+
+    <div class="relative flex-shrink-0" data-aos="zoom-in" data-aos-delay="200">
+        <a href="#" class="flex items-center px-6 py-2 bg-custom-yellow text-custom-purple font-semibold rounded-full shadow-lg border-4 border-custom-purple hover:bg-yellow-400 transition duration-300">
+            <span class="portfolio-button-text">View My Portfolio</span>
+        </a>
+        <div class="absolute -right-5 top-1/2 w-12 h-12 rounded-full bg-custom-purple transform -translate-y-1/2 flex items-center justify-center border-4 border-custom-yellow shadow-md">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </div>
+    </div>
+
+    <div class="stats-bar w-full mt-4 md:mt-0 md:w-auto flex-shrink-0 bg-custom-purple p-2 rounded-lg shadow-xl"
+         data-aos="fade-left" data-aos-delay="400"> 
+        
+        <div class="flex flex-col sm:flex-row justify-around items-center text-white gap-x-6">
+            
+            <div class="stats-item text-center flex flex-col items-center">
+                <span class="text-sm whitespace-nowrap">500+ Happy Clients</span>
+            </div>
+            
+            <div class="stats-item text-center flex flex-col items-center sm:border-l sm:border-r border-custom-dark-purple px-6 py-1 sm:py-0">
+                <span class="text-sm whitespace-nowrap">700+ Project Well Done</span>
+            </div>
+            
+            <div class="stats-item text-center flex flex-col items-center">
+                <span class="text-sm whitespace-nowrap">4 Years Experience Works</span>
+            </div>
+        
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="w-full bg-custom-purple mt-auto py-2">
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
