@@ -173,3 +173,22 @@ document.addEventListener('DOMContentLoaded', () => {
         backbtn.addEventListener('click', showFirstBox);
     }
 });
+
+// section 3
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("Portfolio page loaded successfully.");
+
+    // Example of a simple interaction, e.g., a subtle animation on the Download CV button
+    const cvButton = document.querySelector('.group');
+    if (cvButton) {
+        cvButton.addEventListener('click', (event) => {
+            // In a real scenario, you might add tracking or a confirmation here
+            console.log("Download CV clicked.");
+            // Prevent the default anchor action for this example
+            // event.preventDefault(); 
+        });
+    }
+
+    // You could add logic here for displaying tool descriptions on hover/click, etc.
+});

@@ -1,7 +1,9 @@
 /* കസ്റ്റം നിറങ്ങൾ */
 .bg-custom-purple { background-color: #701c8b; }
+.bg-custom-lightpurple { background-color: #9509c4; }
 .text-custom-purple { color: #701c8b; }
 .bg-custom-yellow { background-color: #FFC000; }
+.text-custom-yellow { color: #FFC000; }
 .bg-custom-dark-purple { background-color: #701c8b; }
 .border-custom-purple { border-color: #701c8b; }
 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simplified About Me Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom CSS utility classes */
+        .bg-custom-purple { background-color: #701c8b; }
+        .text-custom-purple { color: #701c8b; }
+        .bg-custom-yellow { background-color: #FFC000; }
+        .text-custom-yellow { color: #FFC000; }
+        
+        /* Styles for the profile image */
+        .profile-image-simple {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Apply filter for the black & white effect */
+            filter: grayscale(100%); 
+        }
+
+        /* Container for the image to be full height on desktop */
+        @media (min-width: 768px) {
+            .profile-col {
+                min-height: 350px; /* Ensure the image area has a minimum height */
+            }
+        }
+    </style>
+</head>
+<body class="font-['Inter']">
+
+
+    
+</body>
+</html>
