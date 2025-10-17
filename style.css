@@ -31,3 +31,36 @@ body {
         flex-direction: row; /* വലിയ സ്ക്രീനുകളിൽ വരിയായി വരും */
     }
 }
+
+
+/* section 2 */
+
+/* Custom shape background for the main section to mimic the screenshot */
+.wavy-bg {
+    background-color: #522D80; /* Custom purple, but defined here for simplicity */
+    /* A simplified approach to the 'wavy' look using border-radius for the corners */
+    border-top-left-radius: 40px 100px;
+    border-bottom-right-radius: 40px 100px;
+    padding: 3rem 0;
+    overflow: hidden; /* To handle the overflow of the card/content box */
+}
+
+/* Custom rounded edges on the main content box to match the image */
+.content-box {
+    border-radius: 25px; /* Large border radius for the main white/light grey box */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the cropped image circle */
+.profile-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid white; /* White border around the profile picture */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* The rest of the styling (colors, layout, responsiveness) 
+    is handled by the Tailwind CSS classes within the HTML.
+*/
