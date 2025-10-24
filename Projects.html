@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Grid with Peek-a-boo Lightbox</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom styles for the rounded background of the lightbox */
+        .lightbox-bg-pattern {
+            background-color: #f0f0f0; /* Light gray from image */
+            background-image: radial-gradient(#d4d4d4 1px, transparent 1px);
+            background-size: 15px 15px;
+        }
+
+        /* Essential for smooth movement of the lightbox slider track */
+        #lightbox-slider-track {
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Custom easing */
+        }
+
+        /* Lightbox visibility transitions */
+        .lightbox-hidden {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s 0.3s, opacity 0.3s linear;
+        }
+        .lightbox-visible {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s linear;
+        }
+
+        /* Thumbnail Image Styling */
+        .grid-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures images cover the area without distortion */
+            border-radius: 0.5rem; /* Matches border-radius on parent div */
+        }
+
+        /* Lightbox Slide Image Styling */
+        .lightbox-slide-content img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Ensures the whole image is visible within its container */
+            border-radius: 1.5rem; /* Matches the rounded-[2rem] on parent */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+ <header class=" px-4 sm:px-4 lg:px-24 w-full top-8 z-50  fixed">
+    <div class=" mx-auto px-1 sm:px-1 lg:px-1 py-1 flex justify-between items-center bg-custom-purple rounded-full shadow-md" 
+         data-aos="fade-down" data-aos-duration="1000">
+        
+        <div class="flex items-center space-x-2">
+            <span class="w-14 h-10 rounded-full bg-custom-yellow"></span>
+            <span class="text-xl font-bold text-white">Muhammad Shabeer</span>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-6">
+            <a href="#home" class="text-yellow-500 font-semibold hover:text-custom-dark-purple">Home</a>
+            <a href="#services" class="text-white hover:text-custom-purple">Services</a>
+            <a href="#about" class="text-white hover:text-custom-purple">About</a>
+            <a href="#projects" class="text-white hover:text-custom-purple">Projects</a>
+            <a href="#contact" class="px-5 py-2 bg-white text-custom-purple rounded-full font-semibold hover:bg-custom-dark-purple transition duration-300">
+                Contact Me
+            </a>
+        </nav>
+        
+        <button id="mobile-menu-button" class="md:hidden text-white p-2 focus:outline-none">
+             <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+             <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu-hidden md:hidden absolute w-[90%] left-1/2 -translate-x-1/2 mt-[-10px] shadow-2xl rounded-xl overflow-hidden">
+
+        <nav class="flex flex-col space-y-2 px-6 pt-8 pb-6 bg-white -mt-8 rounded-t-lg">
+            <a href="#home" class="block py-2 text-custom-purple font-semibold hover:bg-gray-100">Home</a>
+            <a href="#services" class="block py-2 text-gray-700 hover:bg-gray-100">Services</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:bg-gray-100">About</a>
+            <a href="#projects" class="block py-2 text-gray-700 hover:bg-gray-100">Projects</a>
+            
+            <a href="#contact" class="block mt-4 text-center px-5 py-3 bg-custom-purple text-white rounded-full font-semibold hover:bg-custom-dark-purple transition duration-300">
+                Contact Me
+            </a>
+        </nav>
+    </div>
+</header>
+    
+    <main class="mt-20 px-4 sm:px-4 lg:px-24 " data-aos="fade-up" data-aos-delay="400">
+        
+        <div class="my-10">
+           <h1 class="text-4xl font-semibold mb-2" data-aos="fade-up">
+                <span class="text-custom-purple">My </span>
+                <span class="text-custom-yellow">Projects</span>
+            </h1>
+            <hr class="border-t-2 border-gray-300 " data-aos="fade-right" data-aos-delay="300">
+        </div>
+
+        
+        <div class="md:col-span-4 lg:col-span-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-2">
+            
+            <div class="h-fit grid-thumbnail bg-white rounded-xl shadow-lg border-2 border-gray-100 transition duration-300 hover:shadow-xl p-2 overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="500" data-index="0">
+                <img src="./Projects/1.jpg" alt="A visual representation of Project 1" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="grid-thumbnail bg-white rounded-xl shadow-lg border-2 border-gray-100 transition duration-300 hover:shadow-xl p-2 overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="500" data-index="0">
+                <img src="./Projects/1.jpg" alt="A visual representation of Project 1" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="grid-thumbnail bg-white rounded-xl shadow-lg border-2 border-gray-100 transition duration-300 hover:shadow-xl p-2 overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="500" data-index="0">
+                <img src="./Projects/1.jpg" alt="A visual representation of Project 1" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="grid-thumbnail bg-white rounded-xl shadow-lg border-2 border-gray-100 transition duration-300 hover:shadow-xl p-2 overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="500" data-index="0">
+                <img src="./Projects/1.jpg" alt="A visual representation of Project 1" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="grid-thumbnail bg-white rounded-xl shadow-lg border-2 border-gray-100 transition duration-300 hover:shadow-xl p-2 overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="500" data-index="0">
+                <img src="./Projects/1.jpg" alt="A visual representation of Project 1" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="grid-thumbnail bg-white rounded-xl shadow-lg border-2 border-gray-100 transition duration-300 hover:shadow-xl p-2 overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="500" data-index="0">
+                <img src="./Projects/1.jpg" alt="A visual representation of Project 1" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="grid-thumbnail bg-white rounded-xl shadow-lg border-2 border-gray-100 transition duration-300 hover:shadow-xl p-2 overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="500" data-index="0">
+                <img src="./Projects/1.jpg" alt="A visual representation of Project 1" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="grid-thumbnail bg-white rounded-xl shadow-lg border-2 border-gray-100 transition duration-300 hover:shadow-xl p-2 overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="500" data-index="0">
+                <img src="./Projects/1.jpg" alt="A visual representation of Project 1" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="grid-thumbnail bg-white rounded-xl shadow-lg border-2 border-gray-100 transition duration-300 hover:shadow-xl p-2 overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="500" data-index="0">
+                <img src="./Projects/1.jpg" alt="A visual representation of Project 1" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="grid-thumbnail bg-white rounded-xl shadow-lg border-2 border-gray-100 transition duration-300 hover:shadow-xl p-2 overflow-hidden cursor-pointer" data-aos="zoom-in" data-aos-delay="500" data-index="0">
+                <img src="./Projects/1.jpg" alt="A visual representation of Project 1" class="w-full h-full object-cover rounded-lg">
+            </div>
+
+        
+        </div>
+            
+    </main>
+
+    <div id="lightbox" class="fixed inset-0 flex items-center justify-center z-50 lightbox-hidden lightbox-bg-pattern p-4">
+        
+        <div class="relative w-full max-w-6xl mx-auto py-12">
+            
+            <button id="close-lightbox" class="absolute top-4 right-4 text-purple-900 text-4xl font-bold z-30">&times;</button>
+
+            <div id="lightbox-slider-window" class="overflow-hidden">
+                
+                <div id="lightbox-slider-track" class="flex w-fit items-center">
+                    </div>
+                
+            </div>
+            
+            <button id="lightbox-prev-btn" class="absolute top-1/2 left-0 transform -translate-y-1/2 flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-lg border-2 border-purple-800 text-purple-800 hover:bg-gray-100 transition duration-300">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            </button>
+
+            <button id="lightbox-next-btn" class="absolute top-1/2 right-0 transform -translate-y-1/2 flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-lg border-2 border-purple-800 text-purple-800 hover:bg-gray-100 transition duration-300">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+            </button>
+
+        </div>
+    </div>
+    
+    <script src="slider.js"></script>
+    </body>
+</html>

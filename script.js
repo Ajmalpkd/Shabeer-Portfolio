@@ -1,10 +1,10 @@
-// 1. AOS ഇനിഷ്യലൈസേഷൻ
+
 AOS.init({
     duration: 800, 
     once: true 
 });
 
-// 2. മൊബൈൽ മെനു ടോഗിൾ ഫംഗ്ഷൻ
+
 const menuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
 const menuIcon = document.getElementById('menu-icon');
@@ -16,7 +16,7 @@ menuButton.addEventListener('click', () => {
     closeIcon.classList.toggle('hidden');
 });
 
-// മെനു ലിങ്കുകളിൽ ക്ലിക്ക് ചെയ്യുമ്പോൾ മെനു ഹൈഡ് ചെയ്യാൻ
+
 document.querySelectorAll('#mobile-menu a').forEach(item => {
     item.addEventListener('click', () => {
         mobileMenu.classList.add('mobile-menu-hidden');
@@ -25,62 +25,7 @@ document.querySelectorAll('#mobile-menu a').forEach(item => {
     });
 });
 
-// section 2
-
-// script.js
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     // Get references to the View All elements
-//     const viewAllButton = document.getElementById('viewAllButton');
-//     const viewAllLink = document.getElementById('viewAllLink');
-//     const firstbox = document.getElementById('first');
-//     const secondbox = document.getElementById('second');
-//     const backbtn = document.getElementById('backbtn');
-
-//     // Function to handle the click event
-//     const handleViewAllClick = (event) => {
-//         // Prevent default link behavior (e.g., page reload if href="#")
-//         event.preventDefault(); 
-        
-//         console.log("Navigating to the 'All Services' page...");
-        
-//         // --- Interactivity Example: Provide visual feedback ---
-//         const originalText = viewAllLink.textContent;
-        
-//         // 1. Change text and disable clicks
-//         viewAllLink.textContent = "Loading Services...";
-//         viewAllLink.style.pointerEvents = 'none'; 
-
-//         // 2. Simulate page navigation delay (1 second)
-//         setTimeout(() => {
-//             // Revert text and enable interaction
-//             viewAllLink.textContent = originalText;
-//             viewAllLink.style.pointerEvents = 'auto';
-            
-//             // In a real application, you would navigate here:
-//             // window.location.href = '/all-services-page'; 
-            
-//             alert("View All Services functionality triggered!");
-//         }, 1000);
-//     };
-
-//     // Attach the event handler to both the button and the link
-//     if (viewAllButton) {
-//         viewAllButton.addEventListener('click', handleViewAllClick);
-//     }
-//     if (viewAllLink) {
-//         viewAllLink.addEventListener('click', handleViewAllClick);
-//     }
-// });
-
-//     // Attach the event handler to both the button and the link
-//     if (viewAllButton) {
-//         viewAllButton.addEventListener('click', handleViewAllClick);
-//     }
-//     if (viewAllLink) {
-//         viewAllLink.addEventListener('click', handleViewAllClick);
-//     }
-// ;
+;
 
 document.addEventListener('DOMContentLoaded', () => {
     // Get references to all relevant elements

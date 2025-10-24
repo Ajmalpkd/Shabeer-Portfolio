@@ -22,3 +22,22 @@ module.exports = {
   },
   plugins: [],
 }
+
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        'custom-purple': '#701c8b',
+        'custom-lightpurple': '#9509c4',
+        'custom-yellow': '#FFC000',
+        // The 'custom-dark-purple' and 'border-custom-purple' aliases 
+        // would use the base 'custom-purple' value
+      },
+    },
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+}
